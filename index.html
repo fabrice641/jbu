@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Farmamed Centro Medico Estetico</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="jbul.js"></script>
+</head>
+
+<body id="app-root" data-role="page" class="img-container w-100 h-100 container-fluid">
+    <nav data-role="navbar" class="nav navbar" role="navigation" aria-label="Main Navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="jbul.png" alt="Logo">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item button-is-primary" href="#">Home</a>
+                <a class="navbar-item" href="#">JBUL</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link button-is-secondary" href="#">Multi Frameworks</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item button-is-link" href="#">Feature 1</a>
+                        <a class="navbar-item button-is-link" href="#">Feature 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="#">Sign Up</a>
+                        <a class="button is-light" href="#">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main data-role="main" class="ui-content">
+        <div class="container-fluid img-container w-100 h-100">
+            <img src="jbul.png" class="d-block w-100 h-100" alt="Studio Medico">
+            <h2 class="display-2">JBUL</h2>
+            <p>Il framework **JBUL** è una nuova soluzione web moderna e versatile che integra cinque delle tecnologie web più popolari e potenti disponibili oggi: **React.js**, **jQuery**, **Bootstrap 5.3.3**, **Bulma**, **jQuery Mobile**, e **Font Wow CSS**.</p>
+            
+            <!-- Contenuto aggiuntivo -->
+
+            <p>Con il framework JBUL, gli sviluppatori possono sfruttare il meglio delle tecnologie moderne per creare applicazioni web innovative e accattivanti.</p>
+        </div>
+    </main>
+
+    <footer data-role="footer" class="bg-dark text-white">
+        <figure class="image is-16by9 is-640x360">
+            <img class="img-container" src="jbul.png" alt="Studio Medico">
+        </figure>
+        <p>© Fabris Vulpio, All rights reserved.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Esempio di utilizzo di jQuery per manipolare il DOM
+            $(".button-is-primary").on("click", function() {
+                alert("Pulsante cliccato!");
+            });
+
+            // Inizializzazione della navbar di jQuery Mobile
+            $("body").navbar();
+
+            // Esempio di codice React.js (definisci un componente React)
+            const App = () => (
+                <div>
+                    <h3>Benvenuto nel Framework JBUL</h3>
+                    <p>Questa è una demo di un'applicazione React.js integrata con JBUL.</p>
+                </div>
+            );
+
+            // Renderizza il componente React.js
+            ReactDOM.render(
+                <App />,
+                document.getElementById("app-root")
+            );
+        });
+    </script>
+</body>
+
+</html>
