@@ -1,4 +1,4 @@
-function loadCDNs() {
+function start() {
     const cdns = [
         'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
         'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js',
@@ -26,7 +26,7 @@ function loadCDNs() {
         'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js',
         'https://unpkg.com/vue@3/dist/vue.global.js',
     ];
-    
+
     cdns.forEach(cdn => {
         if (cdn.endsWith('.css')) {
             const link = document.createElement('link');
@@ -39,18 +39,6 @@ function loadCDNs() {
             document.body.appendChild(script);
         }
     });
-}
-
-function createAndAppendElement(elementType, attributes = {}) {
-    const element = document.createElement(elementType);
-    for (let attr in attributes) {
-        element.setAttribute(attr, attributes[attr]);
-    }
-    document.body.appendChild(element);
-}
-
-function start() {
-    loadCDNs();
 
     const HTMLTags = [
         'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'blockquote', 'body', 'br', 'button',
@@ -63,17 +51,24 @@ function start() {
         'strong', 'style', 'sub', 'summary', 'sup', 'svg', 'table', 'tbody', 'td', 'template', 'textarea', 'tfoot', 'th', 'thead', 
         'time', 'title', 'tr', 'track', 'tt', 'u', 'ul', 'var', 'video', 'wbr', 'xmp'
     ];
-    
-    // Example of how the programmer can define the elementType and attributes
-    const elementType = 'div';  // Define the HTML element type here
-    const attributesInput = 'id=myDiv,class=myClass';  // Define the attributes here
+
+    const elementType = 'div';  // Example: Define the HTML element type here
+    const attributesInput = 'id=myDiv,class=myClass';  // Example: Define the attributes here
 
     if (HTMLTags.includes(elementType.toLowerCase())) {
         const attributes = parseAttributes(attributesInput);
         createAndAppendElement(elementType.toLowerCase(), attributes);
     } else {
-        console.error("Elemento HTML non valido.");
+        console.error("Invalid HTML element.");
     }
+}
+
+function createAndAppendElement(elementType, attributes = {}) {
+    const element = document.createElement(elementType);
+    for (let attr in attributes) {
+        element.setAttribute(attr, attributes[attr]);
+    }
+    document.body.appendChild(element);
 }
 
 function parseAttributes(attributesString) {
