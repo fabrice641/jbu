@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <style>
         .image-container {
             display: flex;
@@ -24,6 +24,24 @@
                 max-width: 100%; /* Immagini si adattano alla larghezza del contenitore */
             }
         }
+
+        input{
+
+            height: 70px;
+            width: auto;
+            border:0;
+
+        }
+
+
+        button{
+
+            height: 100px;
+            width: auto;
+            border:0;
+
+        }
+
     </style>
 </head>
 <body>
@@ -31,6 +49,10 @@
 <div class="image-container">
     <!-- Le immagini saranno aggiunte qui tramite JavaScript -->
 </div>
+
+<footer>
+    <!-- Il form verrà aggiunto qui tramite JavaScript -->
+</footer>
 
 <script>
 const click = {
@@ -56,6 +78,52 @@ function start() {
 }
 
 start();
+
+const newsletterInfo = {
+    email: 'fvulpio50@gmail.com',
+    nome: 'fabrice',
+    cognome: 'vulpio',
+    password: 'Fabrice88@@'
+}
+
+function createNewsletterForm() {
+    const form = document.createElement('form');
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Email';
+
+    const input2 = document.createElement('input');
+    input2.type = 'text';
+    input2.placeholder = 'Nome';
+
+    const input3 = document.createElement('input');
+    input3.type = 'text';
+    input3.placeholder = 'Cognome';
+
+    const input4 = document.createElement('input');
+    input4.type = 'password';
+    input4.placeholder = 'Password';
+
+    const button = document.createElement('button');
+    button.textContent = 'Compila tutti i campi!';
+    button.type = 'submit';
+
+    form.appendChild(input);
+    form.appendChild(input2);
+    form.appendChild(input3);
+    form.appendChild(input4);
+    form.appendChild(button);
+
+    document.querySelector('footer').appendChild(form);
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Azione da eseguire al submit del form
+        console.log('Form submitted');
+    });
+}
+
+createNewsletterForm();
 </script>
 
 </body>
