@@ -98,19 +98,20 @@
         document.addEventListener('DOMContentLoaded', start);
     </script>
 </head>
-<body class="app">
+<body class="app ui-widget-header">
     <div>
-        <div data-role="navbar" class="w-100 container-fluid border-1 ui-widget-header">
-            <button data-inline="true"class="ui-btn link-item ui-button">HOME PAGE</button>
-            <button data-inline="true"class="ui-btn link-item ui-button">CHI SIAMO</button>
-            <button data-inline="true"class="ui-btn link-item ui-button">DOVE SIAMO</button>
-            <button data-inline="true"class="ui-btn link-item ui-button">CONTATTI</button>
-
+        <div data-role="navbar" class="w-100 container-fluid border-1  text-center bg-dark">
+            <select data-role="listview" data-inline="true"class="ui-btn link-item ui-button">
+            <option data-inline="true"class="ui-btn link-item ui-button">MENU</option>
+            <option data-inline="true"class="ui-btn link-item ui-button">CHI SIAMO</option>
+            <option data-inline="true"class="ui-btn link-item ui-button">DOVE SIAMO</option>
+            <option data-inline="true"class="ui-btn link-item ui-button">CONTATTI</option>
+        </select>    
         </div>
 
         <div data-role="header" class="ui-widget-header">
-            <img class="d-block w-100 h-100 ui-state-default" src="luna_piena.jpeg" alt="Luna Piena">
-            <img class="d-block w-100 h-100 ui-state-default" src="luna_piena.jpg" alt="Luna Piena">
+            <img class="d-block w-100 h-100 text-center ui-state-default" src="luna_piena.jpeg" alt="Luna Piena">
+            <img class="d-block w-100 h-100 text-center ui-state-default" src="luna_piena.jpg" alt="Luna Piena">
         </div>
 
         <div data-role="footer" class="ui-widget-footer">
